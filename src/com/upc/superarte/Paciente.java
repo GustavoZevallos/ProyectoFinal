@@ -8,25 +8,23 @@ public class Paciente {
     private Historial historial;
     private String nombreApoderado;
 
-    public Paciente(String dni, String nombre, int edad, int telefono, Historial historial) {
+    public Paciente(String dni, String nombre, int edad, int telefono) {
         this.dni = dni;
         this.nombre = nombre;
         this.edad = edad;
         this.telefono = telefono;
-        this.historial = historial;
     }
 
-    public Paciente(String dni, String nombre, int edad, int telefono, Historial historial, String nombreApoderado) {
+    public Paciente(String dni, String nombre, int edad, int telefono,  String nombreApoderado) {
         this.dni = dni;
         this.nombre = nombre;
         this.edad = edad;
         this.telefono = telefono;
-        this.historial = historial;
         this.nombreApoderado = nombreApoderado;
     }
 
-    public Historial asignarHistorial(){
-        return null;
+    public void asignarHistorial(String codigo){
+        this.historial = new Historial(codigo);
     }
 
     public String getDni() {

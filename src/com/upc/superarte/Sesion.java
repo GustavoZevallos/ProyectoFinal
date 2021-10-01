@@ -2,25 +2,45 @@ package com.upc.superarte;
 
 public class Sesion {
     private String codigoSesion;
-    private TipoSesion tipoSesion;
+    private String tipoSesion;
     private Psicologo psicologo;
-    private boolean costo;
     private String horario;
 
-    public Sesion(String codigoSesion, TipoSesion tipoSesion, Psicologo psicologo, boolean costo, String horario) {
+    public Sesion(String codigoSesion, String tipoSesion, Psicologo psicologo, String horario) {
         this.codigoSesion = codigoSesion;
         this.tipoSesion = tipoSesion;
         this.psicologo = psicologo;
-        this.costo = costo;
         this.horario = horario;
     }
 
     public void cambiarHorario(){
-
     }
 
-    public double calcularCosto(){
-        return 0;
+    public double obtenerCostoTipoSesion(){
+        double costo =1;
+        switch (this.tipoSesion){
+            case "Sesión niños":
+                costo =50;
+                break;
+            case "Sesión adolecentes":
+                costo =50;
+                break;
+            case "Sesión adulto mayor":
+                costo=60;
+                break;
+            case "Sesión pareja":
+                costo=70;
+                break;
+        }
+        return costo;
+    }
+
+    public String getTipoSesion() {
+        return tipoSesion;
+    }
+
+    public void setTipoSesion(String tipoSesion) {
+        this.tipoSesion = tipoSesion;
     }
 
     public String getCodigoSesion() {
@@ -31,13 +51,6 @@ public class Sesion {
         this.codigoSesion = codigoSesion;
     }
 
-    public TipoSesion getTipoSesion() {
-        return tipoSesion;
-    }
-
-    public void setTipoSesion(TipoSesion tipoSesion) {
-        this.tipoSesion = tipoSesion;
-    }
 
     public Psicologo getPsicologo() {
         return psicologo;
@@ -47,13 +60,6 @@ public class Sesion {
         this.psicologo = psicologo;
     }
 
-    public boolean isCosto() {
-        return costo;
-    }
-
-    public void setCosto(boolean costo) {
-        this.costo = costo;
-    }
 
     public String getHorario() {
         return horario;

@@ -1,5 +1,6 @@
 package com.upc.superarte;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Administrador extends Empleado{
@@ -7,12 +8,17 @@ public class Administrador extends Empleado{
 
     public Administrador(String dni, String nombre, int edad, String codigoTrabajador, double sueldo, List<Pago> pagos) {
         super(dni, nombre, edad, codigoTrabajador, sueldo);
-        this.pagos = pagos;
+        this.pagos = new ArrayList<>();
     }
 
     @Override
     public double calcularSueldo() {
-        return 0;
+        return Utilitario.SUELDO_FIJO_ADMINISTRADOR;
+    }
+
+    public void registrarPago (String razon, double monto, String fechapago){
+        Pago pago = new Pago(razon,monto,fechapago);
+        this.pagos.add(pago);
     }
 
     public String asignarCargo(){

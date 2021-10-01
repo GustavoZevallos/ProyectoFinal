@@ -1,18 +1,20 @@
 package com.upc.superarte;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Historial {
     private String codigo;
     private List<Sesion> sesiones;
 
-    public Historial(String codigo, List<Sesion> sesiones) {
+    public Historial(String codigo) {
         this.codigo = codigo;
-        this.sesiones = sesiones;
+        this.sesiones = new ArrayList<>();
     }
 
-    public void registrarSesion(){
-
+    public void registrarSesion(String codigoSesion,String tipoSesion, Psicologo psicologo, String horario){
+        Sesion sesion = new Sesion(codigoSesion,tipoSesion,psicologo,horario);
+        this.sesiones.add(sesion);
     }
 
     public String getCodigo() {

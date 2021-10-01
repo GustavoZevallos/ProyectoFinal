@@ -7,7 +7,7 @@ public class Recepcionista extends Empleado{
 
     @Override
     public double calcularSueldo() {
-        return 0;
+        return Utilitario.SUELDO_FIJO_RECEPCIONISTA;
     }
 
     public Sesion asignarSesion(){
