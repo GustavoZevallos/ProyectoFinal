@@ -6,8 +6,8 @@ import java.util.List;
 public class Administrador extends Empleado{
     private List<Pago> pagos;
 
-    public Administrador(String dni, String nombre, int edad, String codigoTrabajador, double sueldo, List<Pago> pagos) {
-        super(dni, nombre, edad, codigoTrabajador, sueldo);
+    public Administrador(String dni, String nombre, int edad, String codigoTrabajador) {
+        super(dni, nombre, edad, codigoTrabajador);
         this.pagos = new ArrayList<>();
     }
 

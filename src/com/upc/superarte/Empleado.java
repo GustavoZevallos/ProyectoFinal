@@ -49,4 +49,13 @@ public abstract class Empleado {
         this.codigoTrabajador = codigoTrabajador;
     }
 
+    @Override
+    public String toString() {
+        return "Empleado \n" +
+                "dni= " + dni +
+                " \nnombre= " + nombre +
+                " \nedad= " + edad +
+                " \ncodigoTrabajador= " + codigoTrabajador +"\n"
+                ;
+    }
 }

@@ -14,6 +14,7 @@ public class Clinica {
     }
 
     public void registrarEmpleado(Empleado empleado){
+
         this.empleados.add(empleado);
     }
 

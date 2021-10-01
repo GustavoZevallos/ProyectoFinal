@@ -4,18 +4,18 @@ public class Paciente {
     private String dni;
     private String nombre;
     private int edad;
-    private int telefono;
+    private String telefono;
     private Historial historial;
     private String nombreApoderado;
 
-    public Paciente(String dni, String nombre, int edad, int telefono) {
+    public Paciente(String dni, String nombre, int edad, String telefono) {
         this.dni = dni;
         this.nombre = nombre;
         this.edad = edad;
         this.telefono = telefono;
     }
 
-    public Paciente(String dni, String nombre, int edad, int telefono,  String nombreApoderado) {
+    public Paciente(String dni, String nombre, int edad, String telefono,  String nombreApoderado) {
         this.dni = dni;
         this.nombre = nombre;
         this.edad = edad;
@@ -51,11 +51,11 @@ public class Paciente {
         this.edad = edad;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
