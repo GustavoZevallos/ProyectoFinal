@@ -12,15 +12,16 @@ public class Psicologo extends Empleado{
     @Override
     public double calcularSueldo() {
         double sueldo=0;
-        if (tipoPsicologo.equals("Tiempo Parcial")){
+        if (tipoPsicologo.equalsIgnoreCase("Tiempo Parcial")){
             for (Paciente p: Clinica.getInstance().getPacientes()){
                 for (Sesion s: p.getHistorial().getSesiones()){
                     if (s.getPsicologo().equals(this)){
                         sueldo = sueldo + (s.obtenerCostoTipoSesion()*0.20);
+
                     }
                 }
             }
-        } else if (tipoPsicologo.equals("Tiempo Completo")){
+        } else if (tipoPsicologo.equalsIgnoreCase("Tiempo Completo")){
             sueldo = Utilitario.SUELDO_FIJO_PSICOLOGO_TC;
         }
         return sueldo;

@@ -14,10 +14,11 @@ public class Clinica {
     }
 
     public void registrarEmpleado(Empleado empleado){
-
         this.empleados.add(empleado);
     }
-
+    public void asignarSesion(Paciente paciente, Psicologo psicologo, String codigoSesion, String tipoSesion, String horaInicio, String horaFin, String fecha){
+        paciente.getHistorial().registrarSesion(codigoSesion,tipoSesion,psicologo,horaInicio,horaFin,fecha);
+    }
     public void registrarPacientes(Paciente paciente){
         this.pacientes.add(paciente);
     }

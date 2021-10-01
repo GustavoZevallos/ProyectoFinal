@@ -13,6 +13,7 @@ public class Paciente {
         this.nombre = nombre;
         this.edad = edad;
         this.telefono = telefono;
+        this.historial = new Historial(dni);
     }
 
     public Paciente(String dni, String nombre, int edad, String telefono,  String nombreApoderado) {
@@ -21,10 +22,7 @@ public class Paciente {
         this.edad = edad;
         this.telefono = telefono;
         this.nombreApoderado = nombreApoderado;
-    }
-
-    public void asignarHistorial(String codigo){
-        this.historial = new Historial(codigo);
+        this.historial = new Historial(dni);
     }
 
     public String getDni() {
