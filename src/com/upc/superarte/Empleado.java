@@ -5,14 +5,14 @@ public abstract class Empleado {
     private String nombre;
     private int edad;
     private String codigoTrabajador;
-    private double sueldo;
 
-    public Empleado(String dni, String nombre, int edad, String codigoTrabajador, double sueldo) {
+
+    public Empleado(String dni, String nombre, int edad, String codigoTrabajador ) {
         this.dni = dni;
         this.nombre = nombre;
         this.edad = edad;
         this.codigoTrabajador = codigoTrabajador;
-        this.sueldo = sueldo;
+
     }
 
     public abstract double calcularSueldo();
@@ -49,11 +49,4 @@ public abstract class Empleado {
         this.codigoTrabajador = codigoTrabajador;
     }
 
-    public double getSueldo() {
-        return sueldo;
-    }
-
-    public void setSueldo(double sueldo) {
-        this.sueldo = sueldo;
-    }
 }

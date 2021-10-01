@@ -12,8 +12,8 @@ public class Historial {
         this.sesiones = new ArrayList<>();
     }
 
-    public void registrarSesion(String codigoSesion,String tipoSesion, Psicologo psicologo, String horario){
-        Sesion sesion = new Sesion(codigoSesion,tipoSesion,psicologo,horario);
+    public void registrarSesion(String codigoSesion,String tipoSesion, Psicologo psicologo,String horaInicio, String horaFin, String fecha){
+        Sesion sesion = new Sesion(codigoSesion,tipoSesion,psicologo,horaInicio,horaFin,fecha);
         this.sesiones.add(sesion);
     }
 

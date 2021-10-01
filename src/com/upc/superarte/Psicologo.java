@@ -4,8 +4,8 @@ public class Psicologo extends Empleado{
     private String tipoPsicologo;
 
 
-    public Psicologo(String dni, String nombre, int edad, String codigoTrabajador, double sueldo, String tipoPsicologo) {
-        super(dni, nombre, edad, codigoTrabajador, sueldo);
+    public Psicologo(String dni, String nombre, int edad, String codigoTrabajador, String tipoPsicologo) {
+        super(dni, nombre, edad, codigoTrabajador);
         this.tipoPsicologo = tipoPsicologo;
     }
 

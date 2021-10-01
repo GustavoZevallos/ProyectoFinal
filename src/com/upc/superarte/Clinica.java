@@ -13,6 +13,14 @@ public class Clinica {
         this.empleados = new ArrayList<>();
     }
 
+    public void registrarEmpleado(Empleado empleado){
+        this.empleados.add(empleado);
+    }
+
+    public void registrarPacientes(Paciente paciente){
+        this.pacientes.add(paciente);
+    }
+
     public static Clinica getInstance(){
         return clinica;
     }
